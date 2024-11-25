@@ -89,7 +89,7 @@ const SecurityHub = () => {
       <div className="bg-blue-900 text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center">
-            Security Guard Solutions Hub
+            Centralized Security Hub
           </h1>
           <p className="mt-4 text-xl text-center text-blue-200">
             Comprehensive protection for modern enterprises
