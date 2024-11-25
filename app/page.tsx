@@ -36,8 +36,8 @@ const SecurityHub = () => {
     {
       title: "FTZ Image Search",
       icon: <Database className="h-8 w-8" />,
-      description: "Secure Image data storage and search",
-      problem: "",
+      description: "Secure Image data storage and search for image verification.",
+      problem: "The FTZ can now verify the asset information they have in their possession with yard asset information without calling the Distribution Center or security.",
       url: "https://ftzimagesearch.vercel.app/"
     },
     {
