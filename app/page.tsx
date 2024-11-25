@@ -1,101 +1,124 @@
-import Image from "next/image";
+import React from 'react';
+import { Card, Badge } from 'antd';
+import { Shield, Lock, Eye, Binary, Network, Database, Cloud, UserCheck, AlertTriangle, FileSearch } from 'lucide-react';
 
-export default function Home() {
+const SecurityHub = () => {
+  const solutions = [
+    {
+      title: "Security Operations Manual",
+      icon: <Shield className="h-8 w-8" />,
+      description: "Comprehensive security point guidelines",
+      problem: "Security point responsibilities were not on hand. Training took too much time",
+      url: "https://pincentryguide.vercel.app/"
+    },
+    {
+      title: "Main Security Login Point",
+      icon: <Lock className="h-8 w-8" />,
+      description: "Zero-trust access management system",
+      problem: "Centralized access control",
+      url: "https://assetmgr.vercel.app/"
+    },
+    {
+      title: "Audit Status Notification",
+      icon: <Eye className="h-8 w-8" />,
+      description: "Containers are proactively audited as soon as a notiification is received on entry into the yard & PINC",
+      problem: "the problem of the FTZ detecting PINC entry issues firstand not security. There was a need for a proactive approach",
+      url: "https://orderstatus.vercel.app/"
+    },
+    
+    {
+      title: "Container Check In/Out",
+      icon: <Network className="h-8 w-8" />,
+      description: "Wizard like interface to check in/out containers",
+      problem: "Problematic workflow for container check in/out which aided lots of PINC entry issues.",
+      url: "https://containercin.vercel.app/"
+    },
+    {
+      title: "FTZ Image Search",
+      icon: <Database className="h-8 w-8" />,
+      description: "Secure Image data storage and search",
+      problem: "",
+      url: "https://ftzimagesearch.vercel.app/"
+    },
+    {
+      title: "CloudArmor",
+      icon: <Cloud className="h-8 w-8" />,
+      description: "Cloud infrastructure security",
+      problem: "Cloud misconfigurations",
+      url: "https://cloudarmor.sec"
+    },
+    {
+      title: "Temp Employee Verification",
+      icon: <Binary className="h-8 w-8" />,
+      description: "Employement agencies add/remove expected employees for the week to the system in realtime. Employee entrance guards verify this information against their Identification in realtime.",
+      problem: "Employee entrance guards issued badges to temporary employees using printouts issued by hiring agencies. These changed quite often and were not always up to date.",
+      url: "https://caleresbadges.vercel.app/employees"
+    },
+    {
+      title: "IdentityForge",
+      icon: <UserCheck className="h-8 w-8" />,
+      description: "Identity verification and management",
+      problem: "Identity theft",
+      url: "https://identityforge.sec"
+    },
+    {
+      title: "RiskRadar",
+      icon: <AlertTriangle className="h-8 w-8" />,
+      description: "Security risk assessment platform",
+      problem: "Risk visibility",
+      url: "https://riskradar.sec"
+    },
+    {
+      title: "Driver's License Scanner",
+      icon: <FileSearch className="h-8 w-8" />,
+      description: "Scan and capture driver's license ID and Name",
+      problem: "Wrong driver's license information capture.",
+      url: "https://licensecannner.vercel.app/"
+    }
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-gray-100">
+      <div className="bg-blue-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-center">
+            Security Guard Solutions Hub
+          </h1>
+          <p className="mt-4 text-xl text-center text-blue-200">
+            Comprehensive protection for modern enterprises
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {solutions.map((solution) => (
+            <a 
+              key={solution.title} 
+              href={solution.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Card 
+                hoverable
+                className="h-full"
+                extra={<Badge color="blue" text="Enterprise" />}
+              >
+                <div className="flex items-center mb-4">
+                  {solution.icon}
+                  <h3 className="text-xl font-semibold ml-3">{solution.title}</h3>
+                </div>
+                <p className="text-gray-600 mb-4">{solution.description}</p>
+                <div className="text-sm text-gray-500">
+                  <strong>Addresses:</strong> {solution.problem}
+                </div>
+              </Card>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default SecurityHub;
