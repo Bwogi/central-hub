@@ -1,6 +1,9 @@
+'use client';
 import React from 'react';
-import { Card, Badge } from 'antd';
-import { Shield, Lock, Eye, Binary, Network, Database, Cloud, UserCheck, AlertTriangle, FileSearch } from 'lucide-react';
+import { Card, Badge, Layout, Space, Divider } from 'antd';
+import { Shield, Lock, Eye, Binary, Network, Database, Cloud, UserCheck, AlertTriangle, FileSearch, Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
+
+const { Footer } = Layout;
 
 const SecurityHub = () => {
   const solutions = [
@@ -85,14 +88,14 @@ const SecurityHub = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <Layout className="min-h-screen">
       <div className="bg-blue-900 text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center">
             Centralized Security Hub
           </h1>
           <p className="mt-4 text-xl text-center text-blue-200">
-            Comprehensive protection for modern enterprises
+            Comprehensive solutions for security management
           </p>
         </div>
       </div>
@@ -124,7 +127,60 @@ const SecurityHub = () => {
           ))}
         </div>
       </div>
-    </div>
+      <Footer className="bg-gray-900 text-gray-300">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h4 className="text-white text-lg font-semibold mb-4">About Us</h4>
+              <p className="text-gray-400">
+                Here to serve your security needs.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-white text-lg font-semibold mb-4">Contact</h4>
+              <Space direction="vertical" className="text-gray-400">
+                <span className="flex items-center">
+                  <Mail className="h-4 w-4 mr-2" /> 
+                </span>
+                <span className="flex items-center">
+                  <Phone className="h-4 w-4 mr-2" /> +1 (949) 381-9944
+                </span>
+                <span className="flex items-center">
+                  <MapPin className="h-4 w-4 mr-2" /> Irvine, CA
+                </span>
+              </Space>
+            </div>
+            <div>
+              <h4 className="text-white text-lg font-semibold mb-4">Quick Links</h4>
+              <Space direction="vertical" className="text-gray-400">
+                <a href="#" className="hover:text-blue-400">Documentation</a>
+                <a href="#" className="hover:text-blue-400">Support</a>
+                <a href="#" className="hover:text-blue-400">Pricing</a>
+                <a href="#" className="hover:text-blue-400">Partners</a>
+              </Space>
+            </div>
+            <div>
+              <h4 className="text-white text-lg font-semibold mb-4">Connect</h4>
+              <Space className="text-gray-400">
+                <a href="#" className="hover:text-blue-400">
+                  <Twitter className="h-6 w-6" />
+                </a>
+                <a href="#" className="hover:text-blue-400">
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a href="#" className="hover:text-blue-400">
+                  <Github className="h-6 w-6" />
+                </a>
+              </Space>
+            </div>
+          </div>
+          <Divider className="border-gray-700" />
+          <div className="text-center text-gray-500">
+            © 2024 Security Solutions Hub. All rights reserved.
+          </div>
+        </div>
+      </Footer>
+      </Layout>
   );
 };
 
