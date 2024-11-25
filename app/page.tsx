@@ -41,11 +41,11 @@ const SecurityHub = () => {
       url: "https://ftzimagesearch.vercel.app/"
     },
     {
-      title: "CloudArmor",
+      title: "Daily Guard Activity Reports",
       icon: <Cloud className="h-8 w-8" />,
-      description: "Cloud infrastructure security",
-      problem: "Cloud misconfigurations",
-      url: "https://cloudarmor.sec"
+      description: "Reports of daily guard activity",
+      problem: "The reports were not always up to date. There was a need for a system to track the activity of the daily guards.",
+      url: "https://dailyar.vercel.app/reports"
     },
     {
       title: "Temp Employee Verification",
@@ -55,18 +55,18 @@ const SecurityHub = () => {
       url: "https://caleresbadges.vercel.app/employees"
     },
     {
-      title: "IdentityForge",
+      title: "Temp Badge Tracking",
       icon: <UserCheck className="h-8 w-8" />,
-      description: "Identity verification and management",
-      problem: "Identity theft",
-      url: "https://identityforge.sec"
+      description: "Identity verification and badge management",
+      problem: "Unreturned badges were a security risk if not tracked. Manual tracking was cumbersome and not always up to date.",
+      url: "https://badgenew.vercel.app/"
     },
     {
-      title: "RiskRadar",
+      title: "The Back Channel",
       icon: <AlertTriangle className="h-8 w-8" />,
-      description: "Security risk assessment platform",
-      problem: "Risk visibility",
-      url: "https://riskradar.sec"
+      description: "Anonymous reporting of security issues.",
+      problem: "Sensitive issues that required immediate action were not being reported especially when those reporting needed to be anonymous.",
+      url: "https://anonyfeedback.vercel.app/"
     },
     {
       title: "Driver's License Scanner",
@@ -74,6 +74,13 @@ const SecurityHub = () => {
       description: "Scan and capture driver's license ID and Name",
       problem: "Wrong driver's license information capture.",
       url: "https://licensecannner.vercel.app/"
+    },
+    {
+      title: "Incident Reporting System",
+      icon: <Shield className="h-8 w-8" />,
+      description: "Report security incidents to the system",
+      problem: "There was a need for a system to track and report security incidents.",
+      url: "https://incidentreports.vercel.app/"
     }
   ];
 
