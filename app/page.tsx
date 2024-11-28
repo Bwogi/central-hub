@@ -8,6 +8,13 @@ const { Footer } = Layout;
 const SecurityHub = () => {
   const solutions = [
     {
+      title: "FTZ Container Verification",
+      icon: <Binary className="h-8 w-8" />,
+      description: "Verify asset information with expected asset port information",
+      problem: "The app automatically verifies the asset information with the expected asset port information. The FTZ can now verify the asset information they have in their possession with yard asset information without calling the Distribution Center or security.",
+      url: "https://ftzcheck.vercel.app/"
+    },
+    {
       title: "Security Operations Manual",
       icon: <Shield className="h-8 w-8" />,
       description: "Comprehensive security point guidelines",
